@@ -34,9 +34,13 @@ def caesar_encrypt(text, shift):
             result+= letter
     return result
 
+def bruteForce(text):
+    for i in range(1, LETTER_RANGE):
+            print(caesar_encrypt(text, -i))
+        
+
 if __name__ == "__main__":
     original_text = "hello world"
     encrypted_text = caesar_encrypt(original_text, 3)
     print(f"Original: {original_text}")
     print(f"Encrypted: {encrypted_text}") # Expected: "khoor zruog"
-
